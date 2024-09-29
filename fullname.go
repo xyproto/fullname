@@ -32,7 +32,6 @@ func Get() string {
 	}
 
 	// Check common environment variables for the full name
-	// You can extend this list with more environment variables if needed
 	fullName := env.StrAlt("FULLNAME", "USER_FULL_NAME")
 	if fullName != "" {
 		return fullName
@@ -84,8 +83,7 @@ func Get() string {
 	}
 
 	// Fallback: Use the username with the first letter capitalized
-	userName := env.CurrentUser()
-	if userName != "" {
+	if userName := env.CurrentUser(); userName != "" {
 		return capitalizeFirst(userName)
 	}
 
