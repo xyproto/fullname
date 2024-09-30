@@ -1,6 +1,6 @@
 # fullname
 
-This is both a Go package and a utility for trying to find the full name of the current user, on Linux.
+This is both a Go package and a utility for trying to find the full name of the current user, on Linux or BSD.
 
 ## Installing the utility
 
